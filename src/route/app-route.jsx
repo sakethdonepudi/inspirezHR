@@ -8,6 +8,7 @@ import Navbar from '../component/navbar'; // Adjust the path as necessary
 import Contact from '../pages/contact';
 import JobOpportunities from '../services/JobOpportunities'; // Adjust the path as necessary
 import HiringHelp from '../services/HiringHelp'; // Adjust the path as necessary
+import Register from '../pages/register';
 
 const AppRouter = () => {
   const routes = [
@@ -35,6 +36,15 @@ const AppRouter = () => {
         <>
           <Navbar />
           <Login />
+        </>
+      ),
+    },
+    {
+      path: "/register",
+      element: (
+        <>
+          <Navbar />
+          <Register />
         </>
       ),
     },
