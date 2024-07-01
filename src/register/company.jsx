@@ -1,7 +1,7 @@
 import React from 'react';
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid';
 
-const Company = () => {
+const RegisterCompany = () => {
   return (
     <div className="max-w-3xl mx-auto py-12 px-6 bg-blue-900 text-white rounded-lg shadow-lg">
       <form>
@@ -172,4 +172,4 @@ const Company = () => {
   );
 }
 
-export default Company;
+export default RegisterCompany;

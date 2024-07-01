@@ -4,11 +4,13 @@ import Home from '../pages/home';
 import Login from '../pages/login';
 import About from '../pages/about';
 import Services from '../pages/services';
-import Navbar from '../component/navbar'; // Adjust the path as necessary
+import Navbar from '../component/navbar'; 
 import Contact from '../pages/contact';
-import JobOpportunities from '../services/JobOpportunities'; // Adjust the path as necessary
-import HiringHelp from '../services/HiringHelp'; // Adjust the path as necessary
+import JobOpportunities from '../services/JobOpportunities'; 
+import HiringHelp from '../services/HiringHelp'; 
 import Register from '../pages/register';
+import RegisterCandidate from '../register/candidate'; 
+import RegisterCompany from '../register/company'; 
 
 const AppRouter = () => {
   const routes = [
@@ -47,6 +49,16 @@ const AppRouter = () => {
           <Register />
         </>
       ),
+      children: [
+        {
+          path: "candidate",
+          element: <RegisterCandidate />
+        },
+        {
+          path: "company",
+          element: <RegisterCompany />
+        }
+      ]
     },
     {
       path: "/services",
@@ -84,7 +96,6 @@ const AppRouter = () => {
         </>
       ),
     },
-    
   ];
 
   const routing = useRoutes(routes);

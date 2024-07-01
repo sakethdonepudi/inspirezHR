@@ -1,7 +1,7 @@
 import React from 'react';
 import { PhotoIcon } from '@heroicons/react/24/solid';
 
-const Candidate = () => {
+const RegisterCandidate = () => {
   return (
     <div className="max-w-3xl mx-auto py-12 px-6 bg-gray-900 text-white rounded-lg shadow-lg">
       <form>
@@ -242,4 +242,4 @@ const Candidate = () => {
   );
 }
 
-export default Candidate;
+export default RegisterCandidate;
