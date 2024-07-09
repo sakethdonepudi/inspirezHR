@@ -9,8 +9,8 @@ import Contact from '../pages/contact';
 import JobOpportunities from '../services/JobOpportunities'; 
 import HiringHelp from '../services/HiringHelp'; 
 import Register from '../pages/register';
-import RegisterCandidate from '../register/candidate'; 
-import RegisterCompany from '../register/company'; 
+import RegisterCandidate from '../pages/candidate'; 
+import RegisterCompany from '../pages/company'; 
 
 const AppRouter = () => {
   const routes = [
@@ -49,16 +49,24 @@ const AppRouter = () => {
           <Register />
         </>
       ),
-      children: [
-        {
-          path: "candidate",
-          element: <RegisterCandidate />
-        },
-        {
-          path: "company",
-          element: <RegisterCompany />
-        }
-      ]
+    },
+    {
+      path: "/register/candidate",
+      element: (
+        <>
+          <Navbar />
+          <RegisterCandidate />
+        </>
+      ),
+    },
+    {
+      path: "/register/company",
+      element: (
+        <>
+          <Navbar />
+          <RegisterCompany />
+        </>
+      ),
     },
     {
       path: "/services",
